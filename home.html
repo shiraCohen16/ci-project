@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 id="hello"></h1>
+
+<script>
+    const username = localStorage.getItem("currentUser");
+
+    if (!username) {
+        window.location.href = "index.html";
+    }
+
+    document.getElementById("hello").innerText = "HELLO " + username;
+</script>
+
+</body>
+</html>
