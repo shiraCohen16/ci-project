@@ -17,6 +17,11 @@ beforeAll(async () => {
     "--single-process"
   ]
 });
+
+    page = await browser.newPage();
+
+    const filePath = "file://" + path.resolve(__dirname, "../index.html");
+    await page.goto(filePath, { waitUntil: "load" });
 });
 
 afterAll(async () => {
